@@ -1,9 +1,0 @@
-.img-container{
-  display: block;
-  width: 100%;
-  position: relative;
-}
-.img-container img{
-  width: 100%;
-  max-height: 500px;
-}
