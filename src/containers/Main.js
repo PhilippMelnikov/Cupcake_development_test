@@ -9,6 +9,9 @@ import * as shoppingCartActions from '../actions/shoppingCartActions';
 import { ProductList } from '../components/ProductList';
 import ProductDetailsDialog from '../components/ProductDetailsDialog';
 
+/**
+ * Main component
+ */
 class Main extends Component {
 
     constructor(props) {
@@ -83,7 +86,6 @@ class Main extends Component {
             <div className="wrapper">
                 <AppBar
                     title="Cupcake store"
-                    iconClassNameRight="muidocs-icon-navigation-expand-more"
                     iconElementRight={
                         <Badge
                             badgeContent={this.props.shoppingCartItems.reduce((prevValue, item) => prevValue + item.amount, 0)}
