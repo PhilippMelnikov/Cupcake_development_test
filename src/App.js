@@ -4,12 +4,15 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Modal from 'react-modal';
 import Main from './containers/Main';
 
+/**
+ * App component
+ */
 class App extends Component {
 
   componentDidMount() {
     Modal.setAppElement('body');
   }
-  
+
   render() {
     const { store } = this.props;
     return (
