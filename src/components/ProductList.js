@@ -13,6 +13,8 @@ export const ProductList = (props) => {
             flexWrap: 'wrap',
             justifyContent: 'space-between',
             padding: '0 23px',
+            margin: '0 auto',
+            maxWidth: 1104,
         },
         gridList: {
             width: '100%',
