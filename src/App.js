@@ -9,6 +9,7 @@ class App extends Component {
   componentDidMount() {
     Modal.setAppElement('body');
   }
+  
   render() {
     const { store } = this.props;
     return (
