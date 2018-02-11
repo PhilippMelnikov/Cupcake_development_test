@@ -33,6 +33,9 @@ const modalStyles = {
    }
   };
 
+/**
+ * ProductDetailsDialog component
+ */
 export default class ProductDetailsDialog extends Component {
     constructor(props) {
         super(props);
@@ -148,7 +151,7 @@ export default class ProductDetailsDialog extends Component {
  *
  */
 ProductDetailsDialog.propTypes = {
-    open: PropTypes.boolean,
+    open: PropTypes.bool,
     item: PropTypes.object,
     handleClose: PropTypes.func,
     handleProductAdd: PropTypes.func
