@@ -5,6 +5,10 @@ import IconButton from 'material-ui/IconButton';
 import Subheader from 'material-ui/Subheader';
 import StarBorder from 'material-ui/svg-icons/toggle/star-border';
 
+/**
+  * ProductList component
+  * @param {string} props
+  */
 export const ProductList = (props) => {
     const { items, HandleProductSelect } = props;
     const styles = {
@@ -32,7 +36,7 @@ export const ProductList = (props) => {
             <GridList
                 cellHeight={180}
                 style={styles.gridList}
-                cols={'auto'}
+                cols={0}
             >   
                 {items.map((item) => (
                     <GridTile
