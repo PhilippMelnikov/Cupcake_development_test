@@ -97,6 +97,7 @@ class Main extends Component {
                 />
                 <ProductList 
                     items={this.props.products}
+                    loading={this.props.productsLoading}
                     HandleProductSelect={this.HandleProductSelect}
                 />
                 {
@@ -115,6 +116,7 @@ class Main extends Component {
 function mapStateToProps(state) {
     return {
         products: state.products.items,
+        productsLoading: state.products.loading,
         selectedItem: state.products.selectedItem,
         shoppingCartItems: state.shoppingCart.items,
     }

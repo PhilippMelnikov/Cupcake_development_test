@@ -9,7 +9,7 @@ import StarBorder from 'material-ui/svg-icons/toggle/star-border';
   * @param {string} props
   */
 export const ProductList = (props) => {
-    const { items, HandleProductSelect } = props;
+    const { items, loading, HandleProductSelect } = props;
     const styles = {
         root: {
             display: 'flex',
@@ -26,13 +26,22 @@ export const ProductList = (props) => {
             justifyContent: 'flex-start',
         },
         titleStyle: {
-            cursor: 'pointer'
+            cursor: 'pointer',
+            width: 180
+        },
+        loadingIconContainer: {
+            width: '100%',
+            textAlign: 'center'
+        },
+        loadingIcon: {
+            width: 200,
+            margin: '0 auto'
         }
     };
     return (
         <div style={styles.root}>
             <h1 className="product-list-header">Products we offer:</h1>
-            <GridList
+            {!loading && <GridList
                 cellHeight={180}
                 style={styles.gridList}
                 cols={0}
@@ -49,6 +58,16 @@ export const ProductList = (props) => {
                     </GridTile>
                 ))}
             </GridList>
+            }
+            {loading && <div className="loading-icon-container" style={styles.loadingIconContainer}>
+                <img
+                    className="loading-icon"
+                    src="img/loading_icon.gif"
+                    style={styles.loadingIcon}
+                    alt="loading-icon"
+                />
+            </div>
+            }
         </div>
     )
 }
